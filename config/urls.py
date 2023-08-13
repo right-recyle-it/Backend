@@ -22,4 +22,6 @@ urlpatterns = [
     path('',main),
     path('map/', map_view, name='map'),
     path('accounts/', include('allauth.urls')),
+    path('donate/', include('donate.urls')),
+    path('get/', include('get.urls')),
 ]
