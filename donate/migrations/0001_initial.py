@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Donate',
             fields=[
-                ('name', models.CharField(max_length=10, primary_key=True, serialize=False)),
+                ('name', models.CharField(max_length=10, serialize=False)),
                 ('kind', models.CharField(max_length=30)),
                 ('condition', models.CharField(max_length=10)),
                 ('upgrade', models.CharField(max_length=2)),

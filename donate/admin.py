@@ -3,9 +3,9 @@ from .models import Donate
 
 # Register your models here.
 
-class DonateAdmin(admin.ModelAdmin):
-    search_fields = ['kind']
+# class DonateAdmin(admin.ModelAdmin):
+#     search_fields = ['kind']
 
-admin.site.register(Donate, DonateAdmin)
+admin.site.register(Donate)
 
 

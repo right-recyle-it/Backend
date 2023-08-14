@@ -1,8 +1,9 @@
 from django.urls import path
 
-from .views import index, button
+from .views import index, btton
+app_name = 'donate'
 
 urlpatterns = [
-    path('', button),
+    path('', btton),
     path('donatee', index),
 ]
