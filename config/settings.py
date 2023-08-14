@@ -44,8 +44,13 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.kakao',
+<<<<<<< HEAD
     'donate.apps.DonateConfig',
     'get.apps.GetConfig',
+=======
+    'drf_yasg',
+    'rest_framework',
+>>>>>>> 3c23ee6cae572b4aff746e1b91c57befaa7acf72
 ]
 
 AUTHENTICATION_BACKENDS = [
