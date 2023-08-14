@@ -1,0 +1,133 @@
+body {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+}
+.email {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 4.03004px;
+}
+.email input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+}
+.password {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 4.03004px;
+}
+.password input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+}
+.loginbutton {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background-color: #00498C;
+    border-radius: 4.03004px;
+}
+.loginbutton h2 {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+}
+.loginbutton:hover {
+    background-color: #105c92;
+}
+.kakaologinbutton {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background: #FEE500;
+    border-radius: 4.03004px;
+}
+.kakaologinbutton:hover {
+    background-color:  #dbc503;
+}
+.kakaologinbutton h2 {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+
+}
+.signup{
+    margin-top:3%;
+}
+.signup h2{
+font-size: 20px;
+text-decoration: underline;
+color:black;
+}
+.signup a {
+    color: black; /* 링크의 색상을 검정색으로 설정 */
+    color: black; /* 링크에 마우스를 올렸을 때, 포커스 상태일 때, 클릭한 상태일 때 색상을 검정색으로 유지 */
+    outline: none; /* 클릭한 상태일 때 포커스 표시 제거 */
+    text-decoration: underline; /* 링크 텍스트에 밑줄 표시 유지 */
+}
+a{
+    text-decoration: none;
+}

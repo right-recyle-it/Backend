@@ -1,0 +1,76 @@
+body, html {
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  /* border-bottom: 1px solid #e5e5e5; */
+}
+.header-container {
+  max-width: 80rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  margin: 0 114px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 1.5rem;
+  top: 2rem;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.title {
+  display: flex;
+  margin-top: 1rem;
+  width: 133px;
+  height: 35px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 6rem;
+}
+
+.user-img {
+  width: 145px;
+  height: 139px;
+  flex-shrink: 0;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn1 {
+  width: 280px;
+  height: 61px;
+  flex-shrink: 0;
+  margin-bottom: 2.5rem;
+}
+
+.btn2 {
+  width: 280px;
+  height: 61px;
+  flex-shrink: 0;
+}

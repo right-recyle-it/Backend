@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    /* height: 844px; */
+
+}
+
+.container {
+    display: flex;
+    margin-top: 54px;
+    width: 360px;
+    align-items: center;
+}
+
+.btn_back {
+    margin-left: 25px;
+    margin-right: 75px;
+    margin-bottom: 17px;
+    width: 6.422px;
+    height: 12.844px;
+    flex-shrink: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.title {
+    align-items: center;
+    justify-content: center;
+    color:#2B99FF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 150px;
+    height: 35px;
+    -webkit-text-stroke: 1px black;
+
+}
+
+
+/* 라디오 버튼 설정 */
+
+label {
+    font-size: 18px;
+    line-height: 2rem;
+    padding: 0.2em 0.4em;
+  }
+  
+  [type="radio"], span {
+    vertical-align: middle;
+  }
+  
+  [type="radio"] {
+    appearance: none;
+    border: max(2px, 0.1em) solid gray;
+    border-radius: 50%;
+    width: 1.25em;
+    height: 1.25em;
+    transition: border 0.5s ease-in-out;
+  }
+  
+  [type="radio"]:checked {
+    border: 0.4em solid #2B99FF;
+  }
+  
+  [type="radio"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.1em) dotted #2B99FF;
+  }
+  
+  [type="radio"]:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+    cursor: pointer;
+  }
+  
+  [type="radio"]:hover + span {
+    cursor: pointer;
+  }
+  
+  [type="radio"]:disabled {
+    background-color: lightgray;
+    box-shadow: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  [type="radio"]:disabled + span {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+
+
+.device_list {
+    margin-top: 16px;
+    height: 600px;
+    width: 280px;
+    overflow: auto;
+    justify-content: flex-start;
+}
+
+.device_list_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.item_galaxy-tab {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5 ;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+    /* line-height: 31.475px; */
+}
+
+.horizontal-line {
+    /* margin-top: 5px; */
+    margin-left: 7px;
+    width: 180px;
+    height: 0.7px;
+    background-color: #999; /* 선의 색상을 설정하세요 */
+}
+
+.item_ipad-mini {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.item_ipad-air {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.item_lg-notebook {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.item_samsung-notebook {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.item_macbook {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.item_iphone {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.item_galaxy-phone {
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 247px;
+    height: 69px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+
+
+
+/* 하단 버튼 */
+
+.apply_btn {
+    /* margin-left: 40px; */
+    margin-top: 27px;
+    margin-bottom: 29px;
+    border: 0;
+    background-color: transparent;
+}
