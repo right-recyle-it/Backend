@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/logo.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맞재</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="로고">
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = "../html/login.html";
+        }, 2000);
+    </script>
+</body>
+</html>

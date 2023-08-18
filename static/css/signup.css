@@ -1,0 +1,134 @@
+body {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+}
+.logo img {
+    width: 200px;
+    height: auto;
+}
+.name {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 4.03004px;
+}
+.name input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+}
+.email {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 4.03004px;
+}
+.email input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+}
+.password {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 4.03004px;
+}
+.password input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+}
+.confirm {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border-radius: 4.03004px;
+}
+.confirm input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+}
+.signupbutton {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+    box-sizing: border-box;
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    background-color: #00498C;
+    border-radius: 4.03004px;
+}
+.signupbutton:hover {
+    background-color: #105c92;
+}
+.signupbutton h2 {
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+

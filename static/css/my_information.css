@@ -1,0 +1,144 @@
+body, html {
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  /* border-bottom: 1px solid #e5e5e5; */
+}
+.header-container {
+  max-width: 80rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  margin: 0 114px;
+}
+
+.back-btn {
+  position: absolute;
+  left: 1.5rem;
+  top: 2rem;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.title {
+  display: flex;
+  margin-top: 1rem;
+  width: 140px;
+  height: 28px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 2rem;
+}
+
+#user-img {
+  width: 91px;
+  height: 90px;
+  flex-shrink: 0;
+  position: relative;
+  left:1rem;
+}
+
+#user-id {
+  color: #000;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Noto Sans;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13px; 
+  letter-spacing: -1px;
+  position: relative;
+  left: 4rem;
+  top: 3rem;
+}
+.information {
+  margin: 1.5rem;
+  margin-top: 3rem;
+}
+
+.name {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.name h2 {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13px; /* 86.667% */
+  letter-spacing: -1px;
+}
+
+#user-name {
+  padding: 10px;
+  padding-right: 200px;
+  margin-top: 1rem;
+  width: 280px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #E5E7EB;
+  background: #FFF;
+}
+
+
+.e-mail {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.e-mail h2 {
+  color: #000;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13px; /* 86.667% */
+  letter-spacing: -1px;
+}
+
+#user-email {
+  padding: 10px;
+  padding-right: 200px;
+  width: 280px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #E5E7EB;
+  background: #FFF;
+}
+
+.add-info {
+  display: flex;
+  justify-content: end;
+  color: #999;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 31.475px; /* 224.824% */
+  letter-spacing: -0.492px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 신청내역</title>
+    <link rel="stylesheet" href="{% static 'css/my_device.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <a href="/mypage"><img src="{% static 'img/Arrow_Left.png' %}" alt="뒤로가기" class="logo"></a>
+            <h2>나의 신청내역</h2>
+        </div>
+
+    <div class="box-container">
+        <div class="box-category1" >
+                <h2 class="title">기기 기부하기 </h2>
+                <img src="{% static 'img/down11.png' %}" alt="down" onclick="toggleBox('box-category1', 'name1')">
+                <h3 class="name" id="name1">신청 내역이 없습니다.</h3>
+            </a>
+        </div>
+        <div class="box-category2" >
+            <h2 class="title">기기 받기 </h2>
+            <img src="{% static 'img/down11.png' %}" alt="down" onclick="toggleBox('box-category2', 'name2')">
+            <h3 class="name" id="name2">
+                • 이름 : 이소민<br> 
+                • 필요한 기기 종류 : 태블릿<br> 
+                • 기기 받을 곳 : 성북지점 <br> 
+                • 신청 사유 : 태블릿으로 인강 자료 편하게 보고싶어요!</h3>
+        </div>
+    </div>
+
+     
+</div>
+<script>
+ function toggleBox(boxClass, id) {
+        var boxElement = document.querySelector('.' + boxClass);
+        var nameElement = document.getElementById(id);
+
+        if (boxElement.style.height === "72px" || boxElement.style.height === "") {
+            if (boxClass === 'box-category1') {
+                boxElement.style.height = "120px";
+            } else if (boxClass === 'box-category2') {
+                boxElement.style.height = "220px";
+            }
+            nameElement.style.display = "block";
+        } else {
+            boxElement.style.height = "72px";
+            nameElement.style.display = "none";
+        }
+    }
+    </script>
+</body>
+</html>

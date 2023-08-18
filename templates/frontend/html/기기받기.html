@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>맞재</title>
+  <link rel="stylesheet" href="{% static 'css/기기받기.css' %}">
+</head>
+<body>
+  <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+  <div class="layout">
+    <header>
+      <div class="header-container">
+        <a href="/">
+          <img src="{% static 'img/Arrow_Left.png' %}" alt="" class="back-btn">
+        </a>
+        <img src="{% static 'img/기기 받기.png' %}" alt="" class="title">
+      </div>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <div class="name">
+          <h2>이름</h2>
+          <input type="text" name="name" placeholder="이름을 입력하세요"/>
+        </div>
+  
+        <div class="type">
+          <h2>필요한 기기 종류</h2>
+          <select name="kind" id="">
+            <option value="Device Type">Device Type</option>
+            <option value="Iphone">아이폰</option>
+            <option value="Galaxy Phone">갤럭시폰</option>
+            <option value="Ipad">아이패드</option>
+            <option value="Galaxy Book">삼성 노트북</option>
+            <option value="Mac Book">맥북</option>
+            <option value="LG 노트북">LG 노트북</option>
+          </select>
+        </div>
+
+        <div class="address">
+          <h2>기기 받을 곳</h2>
+          <input name="address" placeholder="기기 받을 주소를 입력해주세요"/>
+        </div>
+  
+        <div class="reason">
+          <h2>신청 사유</h2>
+          <input name="reason" placeholder="신청사유를 작성해주세요 (100자 이상)"/>
+        </div>
+
+        <div class="application-btn">
+          <input type="submit" value="신청하기" class="btn" />
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

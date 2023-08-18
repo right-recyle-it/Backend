@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <div id="map" style="height: 600px"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        var map = L.map('map', {
+            center: [37.5665, 126.9780],
+            zoom: 13,
+            maxZoom: 20  // 최대 줌 레벨 설정
+        });
+      map.setMaxBounds([[32, 123], [44, 132.5]]); //한국
+
+      L.tileLayer('https://tiles.osm.kr/hot/{z}/{x}/{y}.png', {
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://openstreetmap.org/copyright">LikeLion</a>'
+      }).addTo(map);
+
+      // 축척 막대를 지도 왼쪽 하단에 노출
+      L.control.scale({imperial: true, metric: true}).addTo(map);
+
+        map.on('zoomend', function () {
+            var currentZoom = map.getZoom();
+            if (currentZoom > 20) {
+                map.setZoom(20); // 최대 줌 레벨 초과로 줌 인하지 못하도록 설정
+            }
+        });
+
+      if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                L.marker([lat, lng]).addTo(map)
+                    .bindPopup("Your current location").openPopup();
+                map.setView([lat, lng], 15); // 현재 위치로 지도 이동
+            });
+        } else {
+            console.log("Geolocation is not available in this browser.");
+        }
+
+      {% for location in locations %}
+          var marker = L.marker([{{ location.latitude }}, {{ location.longitude }}]).addTo(map)
+              .bindPopup('{{ location.name }}');
+
+          marker.on('click', function(e) {
+              var clickedLatLng = e.latlng;
+              var currentLocation = map.getCenter();
+              var distance = currentLocation.distanceTo(clickedLatLng);
+              marker.bindPopup('{{ location.name }}' + '<br>Distance: ' + distance.toFixed(2) + ' meters').openPopup();
+          });
+      {% endfor %}
+    </script>
+  </body>
+</html>
+
+

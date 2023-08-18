@@ -1,0 +1,9 @@
+
+{% for donate in donate_list%}
+    <ul>
+    {{ donate.name }}
+    {{ donate.kind }}
+    {{ donate.condition }}
+    {{ donate.upgrade }}
+    </ul>
+{% endfor %}

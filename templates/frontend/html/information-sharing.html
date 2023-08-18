@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료제공</title>
+    <link rel="stylesheet" href="{% static 'css/information-sharing.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container">
+        <a href="/">
+        <button type="button" class="btn_back" id="back_btn">
+            <img id="back_image" src="{% static 'img/Arrow_Left.svg' %}">
+        </button>
+        </a>
+        <span class="title">자료 제공</span>
+    </div>
+
+
+    <div class="btn_group">
+        <a href="deviceinstruction">
+        <button type="button" class="device_btn" id="device_btn"><img id="device_btn_image" src="{% static 'img/device_btn.svg' %}"></button>
+        </a>
+        <a href="template">
+        <button type="button" class="template_btn" id="template_btn"><img id="template_btn_image" src="{% static 'img/template_btn.svg' %}"></button>
+        </a>
+    </div>
+    
+    <script src="{% static 'js/information-sharing.js' %}" defer></script>
+</body>
+</html>

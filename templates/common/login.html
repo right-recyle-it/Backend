@@ -1,0 +1,60 @@
+<div class="container my-3">
+        {% include "form_errors.html" %}
+        <html lang="en">
+            <head>
+                {% load static %}
+                <link rel="stylesheet" href="{% static 'css/login.css' %}">
+                <title>맞재</title>
+
+            </head>
+            <body>
+                <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                <div class="container">
+                    <div class="logo">
+                        <img src="{% static 'img/logo2.png' %}" alt="로고">
+                    </div>
+
+                    <div class="login"
+                        style="border: 1px solid #EDEDED;
+                        padding : 13px; color :  gray">
+                        <input placeholder="E-mail address" type="text" class="form-control" name="username" id="username" value="{{ form.username.value|default_if_none:'' }}">
+                    </div>
+
+                    <div
+                        class="login"
+                        style="border: 1px solid #EDEDED;
+                        padding : 13px; color :  gray">
+                        <input placeholder="password" type="password" class="form-control" name="password" id="password"
+                        value="{{ form.password.value|default_if_none:'' }}">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="    border: none;
+                    background-color: white;">
+                        <a href="../frontend/html/mainpage.html">
+                            <div
+                                class="loginbutton"
+                                style="border: 1px solid #EDEDED;
+                                padding : 13px; color :  gray">
+                                <h2>로그인 하기</h2>
+                            </div>
+                        </a>
+                    </button>
+
+                    <a href="/kakao/login"><div
+                        class="kakaologinbutton"
+                        style="border: 1px solid #EDEDED;
+                padding : 13px; color :  gray">
+                        <h2>카카오로 로그인</h2>
+                    </div></a>
+                    
+                    <div class="signup">
+                        <a href="{% url 'common:signup'%}">
+                            <h2>회원가입</h2>
+                        </a>
+                    </div>
+
+                </div>
+            </body>
+        </html>
+    </form>
+</div>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>맞재</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="icon">
+                <a href="/"><img src="{% static 'img/logo2.png' %}" alt="로고" class="logo"></a>
+                <!-- 햄버거버튼 -->
+                <a class="menu-trigger" href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <!-- 햄버거 메뉴 시작 -->
+            <div class="ham-con">
+                <div id="ham-menu-wrap">
+                    <div class="ham-menu mt-5">
+                        <ul class="ham-top-menu">
+                            <li>
+                                <a href="{% url 'map'%}">기기 수거지점<i class="bi bi-caret-down-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- <ul class="ham-top-menu">
+                            <li>
+                                <a href="#">메뉴2<i class="bi bi-caret-down-fill"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
+
+                </div>
+            </div>
+            <!-- 햄버거 메뉴 끝 -->
+
+            <div class="sec">
+                <div id="ad-container">
+                    <img
+                        src="{% static 'img/ad1.png' %}"
+                        style="width: 100%; height: auto; text-align: center;"
+                        alt="광고">
+                    <img
+                        src="{% static 'img/ad2.png' %}"
+                        style="width: 100%; height: auto; text-align: center;"
+                        alt="광고">
+                    <img
+                        src="{% static 'img/ad3.png' %}"
+                        style="width: 100%; height: auto; text-align: center;"
+                        alt="광고">
+                    <!-- <img src="/img/leftarrow2.png" style="position: absolute; top: 48%; left:
+                    8%; transform: translate(-50%, -50%); width: 20px; height: 20px;z-index: 1;"
+                    alt="화살표" onclick="prevSlide()"> <img src="/img/rightarrow2.png"
+                    style="position: absolute; top: 48%; left: 88%; transform: translate(-50%,
+                    -50%); width: 20px; height: 20px;" alt="화살표" onclick="nextSlide()"> -->
+                </div>
+            </div>
+
+            <div class="category_container">
+                <div class="row">
+                    <div class="category">
+                        <a href="{% url 'donate:donate'%}">
+                            <img src="{% static 'img/users.png' %}">
+                            <h2>기기 기부하기</h2>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="{% url 'get:get'%}">
+                            <img src="{% static 'img/users2.png' %}">
+                            <h2>기기 받기</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="category">
+                        <a href="education">
+                            <img src="{% static 'img/openbook.png' %}">
+                            <h2>교육자료 제공</h2>
+                        </a>
+                    </div>
+                    <div class="category">
+                        <a href="mypage">
+                            <img src="{% static 'img/user_circle.png' %}">
+                            <h2>마이 페이지</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="{% static 'js/burgerbutton.js' %}"></script>
+        <!-- 이 부분 수정했습니다
+        수정된 부분 시작 -->
+        <script>
+            // 이미지 슬라이드에 사용될 이미지들의 배열
+            const images = ['static/img/ad1.png', 'static/img/ad2.png', 'static/img/ad3.png'];
+
+            // 이미지 슬라이드 인덱스
+            let currentIndex = 0;
+
+            // 이미지 슬라이드를 위한 함수
+            function slideImages() {
+                const adContainer = document.getElementById('ad-container');
+                adContainer.innerHTML = `<img src="${images[currentIndex]}" style="width: 100%; height: auto; text-align: center;" alt="광고">`;
+
+                // 다음 이미지로 이동
+                currentIndex++;
+                if (currentIndex >= images.length) {
+                    currentIndex = 0; // 인덱스 초기화
+                }
+
+                // 일정 시간마다 이미지 슬라이드 실행
+                setTimeout(slideImages, 3000); // 3초마다 이미지 슬라이드
+            }
+
+            // 페이지 로드 시 이미지 슬라이드 시작
+            slideImages();
+        </script>
+        <!-- 수정된 부분 끝 -->
+
+
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>맞재</title>
+  <link rel="stylesheet" href="{% static 'css/기기기부하기.css' %}">
+</head>
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+  <div class="layout">
+    <header>
+      <div class="header-container">
+        <a href="/">
+          <img src="{% static 'img/Arrow_Left.png' %}" alt="back-btn" class="back-btn"> 
+        </a>
+        <img src="{% static 'img/기기 기부하기.png' %}" alt="title" class="title">
+      </div>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <div class="name">
+          <h2>이름</h2>
+          <input type="text" name="name" placeholder="이름을 입력하세요"/>
+        </div>
+      </div>
+            <!-- <label for="id_condition">condition</label>
+            <textarea name="condition" id="id_condition" cols="30" rows="10"></textarea> -->
+
+            <!-- <label for="id_upgrade">upgrade</label>
+            <textarea name="upgrade"  id="id_upgrade" cols="30" rows="10"></textarea> -->
+        
+        <div class="type">
+          <h2>기부할 기기 종류</h2>
+          <select name="kind" id="">
+            <option value="Device Type">Device Type</option>
+            <option value="Iphone">아이폰</option>
+            <option value="Galaxy Phone">갤럭시폰</option>
+            <option value="Ipad">아이패드</option>
+            <option value="Galaxy Book">삼성 노트북</option>
+            <option value="Mac Book">맥북</option>
+            <option value="LG 노트북">LG 노트북</option>
+            <option value="Etc">기타</option>
+          </select>
+        </div>
+  
+        <div class="status">
+          <h2>기기 상태</h2> 
+          <!-- 값 받아올 수 있도록 value값 지정 -->
+          <div class="condition">
+            <p style=" font-size: 12px;">불만족</p>
+              <input type="radio" id="select1" name="condition" value="1"><label for="select1"></label>
+              <input type="radio" id="select2" name="condition" value="2"><label for="select2"></label>
+              <input type="radio" id="select3" name="condition" value="3"><label for="select3"></label>
+              <input type="radio" id="select4" name="condition" value="4"><label for="select4"></label>
+              <input type="radio" id="select5" name="condition" value="5"><label for="select5"></label>
+            <p style=" font-size: 12px;">매우 만족</p>
+          </div>
+        </div>
+  
+        <div class="upgrade">
+          <h2>기기 업그레이드 필요 유무</h2>
+          <select name="upgradee" id="id_upgradee">
+            <option value="Upgrade Y/N">Upgrade Y/N</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        
+        <div class="application-btn">
+          <a href="/">
+          <input type="submit" value="신청하기" class="btn" />
+          </a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>

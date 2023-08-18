@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무료 템플릿 다운</title>
+    <link rel="stylesheet" href="{% static 'css/free-template-download.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="/education">
+        <button type="button" class="btn_back" id="back_btn">
+            <img id="back_image" src="{% static 'img/Arrow_Left.svg' %}">
+        </button>
+        </a>
+        <span class="title">무료 템플릿 다운</span>
+    </div>
+
+    <div class="btn_group">
+        <button type="button" class="diary_btn" id="img_btn"><img id="diary_btn_image" src="{% static 'img/diary_btn.svg' %}"></button>
+        <button type="button" class="note_btn" id="img_btn"><img id="note_btn_image" src="{% static 'img/note_btn.svg' %}"></button>
+    </div>
+    
+    <script src="{% static 'js/free-template-download.js' %}"></script>
+</body>
+</html>

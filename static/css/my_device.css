@@ -1,0 +1,108 @@
+body {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 수직 가운데 정렬 */
+    width: 100%;
+    margin-top: 20px;
+}
+.logo {
+    max-width: 24px;
+    max-height: 24px;
+    margin-left: 28px;
+    margin-right: 10px;
+    /* 간격 조정을 위해 margin-right 추가 */
+}
+.icon h2 {
+    color: #2B99FF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: normal;
+    height: 35px;
+    -webkit-text-stroke: 1px black;
+    margin-right: 85px;
+    /* 간격 조정을 위해 margin-left 추가 */
+}
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 16px;
+    position: absolute;
+    width: 342px;
+    height: 600px;
+    left: calc(50%+24px);
+    top: 150px;
+}
+.box-category1 {
+    width: 300px;
+    height: 72px;
+    /* height : 120px; */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.box-category2 {
+    width: 300px;
+    height: 72px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.box-category1 img,
+.box-category2 img {
+    margin-top: 18px;
+    margin-left: 220px;
+}
+.title {
+    position: absolute;
+    text-align: left;
+    width: 160px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+.name {
+    display: none;
+    text-align: left;
+    position: absolute;
+    width: 200px;
+    height: 26px;
+    line-height: 150%;
+    font-style: normal;
+    font-size: 15px;
+    color: #5b5a5a;
+    margin-top: 20px;
+    margin-left: 40px;
+}

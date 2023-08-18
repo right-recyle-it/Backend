@@ -1,0 +1,61 @@
+<div class="container my-3">
+        {% include "form_errors.html" %}
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/loginfail.css' %}">
+        <title>맞재</title>
+
+    </head>
+    <body>
+        <form method="post" action="{% url 'common:login' %}">
+            {% csrf_token %}
+        <div class="container">
+            <div class="logo">
+                <img src="{% static 'img/logo2.png' %}" alt="로고">
+            </div>
+
+            <div
+                class="email"
+                style="border: 1px solid #EDEDED;
+                padding : 13px; color :  gray">
+                <input placeholder="E-mail address" type="text" class="form-control" name="email" id="email" value="{{ form.email.value|default_if_none:'' }}">
+            </div>
+
+            <div
+                class="password"
+                style="border: 1px solid #EDEDED;
+               padding : 13px; color :  gray">
+                <input placeholder="password" type="password" class="form-control" name="password" id="password"
+                value="{{ form.password.value|default_if_none:'' }}">
+            </div>
+            <div class="loginfail">
+                <h2>*이메일 혹은 패스워드가 올바르지 않습니다.</h2>
+            </div>
+            <button type="submit" class="btn btn-primary">
+            <a href="../html/mainpage.html">
+            <div
+                class="loginbutton"
+                style="border: 1px solid #EDEDED;
+            padding : 13px; color :  gray">
+                <h2>로그인 하기</h2>
+            </div>
+            </a>
+            </button>
+            <div
+                class="kakaologinbutton"
+                style="border: 1px solid #EDEDED;
+        padding : 13px; color :  gray">
+                <h2>카카오로 로그인</h2>
+            </div>
+            <div class="signup">
+            <a href="{% url 'common:signup'%}">
+                <h2>회원가입</h2>
+            </a>
+            </div>
+
+        </div>
+        </form>
+    </body>
+</html>
+</div>
