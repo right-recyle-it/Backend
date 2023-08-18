@@ -91,13 +91,13 @@ header {
 
 #user-name {
   padding: 10px;
-  padding-right: 200px;
+  padding-right: 15rem;
   margin-top: 1rem;
   width: 280px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #6f93ad;
   background: #FFF;
 }
 
@@ -117,28 +117,40 @@ header {
   line-height: 13px; /* 86.667% */
   letter-spacing: -1px;
 }
-
 #user-email {
   padding: 10px;
-  padding-right: 200px;
+  padding-right: 8rem;
   width: 280px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 4px;
-  border: 1px solid #E5E7EB;
+  border: 1px solid #6f93ad;
   background: #FFF;
 }
-
 .add-info {
   display: flex;
   justify-content: end;
-  color: #999;
+  color: black;
   text-align: center;
+}
+.add-info {
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 500;
   line-height: 31.475px; /* 224.824% */
   letter-spacing: -0.492px;
+}
+.logout-btn {
+  margin-top: 5rem;
+  display: flex;
+  width: 236px;
+  padding: 1px 31px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #00498C;
+  
 }

@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Donate
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-
+@login_required
 def index(request):
     if request.method == 'GET':
         return render(request, 'donate/donate.html')
@@ -25,3 +26,7 @@ def index(request):
 
 def education(request):
     return render(request, 'frontend/html/information-sharing.html')
+
+# def mydevice(request):
+#     donate = Donate.objects
+#     return render(request, 'html/my_device.html', {'donate' : donate})

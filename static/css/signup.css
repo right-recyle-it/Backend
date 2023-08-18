@@ -15,7 +15,9 @@ body {
     margin-top: 30%;
 }
 .logo img {
-    width: 200px;
+    position: relative;
+    top: 3rem;
+    width: 250px;
     height: auto;
 }
 .name {
@@ -131,4 +133,9 @@ body {
 a{
     text-decoration: none;
 }
-
+.main-container {
+    height: 50rem;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

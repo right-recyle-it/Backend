@@ -21,7 +21,12 @@
     <main>
       <div class="main-container">
         <img src="{% static 'img/user-circle.png' %}" alt="" class="user-img">
-        <h2>OO님</h2>
+        <h2>
+          {% if request.user.is_authenticated %}
+              <div>
+                  {{ user.username }}님 
+              </div>
+            {% endif %}</h2>
       </div>
 
       <div class="btn-container">

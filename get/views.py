@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Get
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -7,7 +8,7 @@ from .models import Get
 def main(request):
     return render(request, 'frontend/html/mainpage.html')
 
-
+@login_required
 def index(request):
     if request.method == 'GET':
         return render(request, 'frontend/html/기기받기.html')

@@ -171,3 +171,12 @@ LOGIN_REDIRECT_URL = '/'
 
 # 로그아웃시 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
+
+# # # 사용자 정의 유저 모델
+# # AUTH_USER_MODEL = 'member.User'
+
+# # 로그인이 완료되면 이동할 URL
+# LOGIN_REDIRECT_URL = '/'
+
+# 로그인이 필요할 경우 이동할 URL
+LOGIN_URL = '/common/login'

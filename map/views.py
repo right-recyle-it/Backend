@@ -1,6 +1,8 @@
 from django.shortcuts import render
-
+from django.contrib.auth.decorators import login_required
 from .models import Location
+from get.models import Get
+from donate.models import Donate
 from config import settings
 
 # def map_view(request):
@@ -28,16 +30,22 @@ def main(request):
     return render(request, 'frontend/html/mainpage.html')
 
 
+@login_required
 def education(request):
     return render(request, 'frontend/html/information-sharing.html')
 
-
+@login_required
 def mypage(request):
     return render(request, 'frontend/html/마이페이지.html')
 
-
 def mydevice(request):
-    return render(request, 'frontend/html/my_device.html')
+    get = Get.objects.all()
+    donate = Donate.objects.all()
+    context = {
+        'get_list' : get,
+        'donate_list' : donate,
+    }
+    return render(request, 'frontend/html/my_device.html', context)
 
 def myinformation(request):
     return render(request, 'frontend/html/my_information.html')

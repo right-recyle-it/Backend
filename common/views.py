@@ -17,7 +17,7 @@ def signup(request):
             print('2')
     else:
         form = UserForm()
-        return redirect('common/signupfail')
+        return render(request, 'common/signup.html', {'form': form})
         print('3')
     print('4')
     return render(request, 'common/signup.html', {'form': form})

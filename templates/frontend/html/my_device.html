@@ -5,10 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 신청내역</title>
-    <link rel="stylesheet" href="{% static 'css/my_device.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/my_device.css' %}"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body {
+    height: 100%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 수직 가운데 정렬 */
+    width: 100%;
+    margin-top: 20px;
+}
+.logo {
+    max-width: 24px;
+    max-height: 24px;
+    margin-left: 28px;
+    margin-right: 10px;
+    /* 간격 조정을 위해 margin-right 추가 */
+}
+.icon h2 {
+    color: #2B99FF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: normal;
+    height: 35px;
+    -webkit-text-stroke: 1px black;
+    margin-right: 85px;
+    /* 간격 조정을 위해 margin-left 추가 */
+}
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 16px;
+    position: absolute;
+    width: 342px;
+    height: 600px;
+    left: calc(50%+24px);
+    top: 150px;
+}
+.box-category1 {
+    width: 300px;
+    height: 72px;
+    /* height : 120px; */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.box-category2 {
+    width: 300px;
+    height: 72px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top: 250px;
+    background: #FFFFFF;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.box-category1 img,
+.box-category2 img {
+    margin-top: 18px;
+    margin-left: 220px;
+}
+.title {
+    position: absolute;
+    text-align: left;
+    width: 160px;
+    height: 26px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+.name {
+    display: none;
+    text-align: left;
+    position: absolute;
+    width: 200px;
+    height: 26px;
+    line-height: 150%;
+    font-style: normal;
+    font-size: 15px;
+    color: #5b5a5a;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+    </style>
 </head>
 <body>
     <div class="container">
@@ -21,17 +131,36 @@
         <div class="box-category1" >
                 <h2 class="title">기기 기부하기 </h2>
                 <img src="{% static 'img/down11.png' %}" alt="down" onclick="toggleBox('box-category1', 'name1')">
-                <h3 class="name" id="name1">신청 내역이 없습니다.</h3>
-            </a>
+                <h3 class="name" id="name1"> 
+                    {% for donate in donate_list %}
+                        {% if request.user.is_authenticated %}
+                            {% if user.username == donate.name %}
+                                • 이름 : {{donate.name}} <br> 
+                                • 기부할 기기 종류 : {{donate.kind}}<br> 
+                                • 기기 상태 : {{donate.condition}} <br> 
+                                • 업그레이드 유무 : {{donate.upgrade}}</h3>
+                            {% endif %}
+                    {% endif %}
+                {% endfor %}               
+                </h3>
         </div>
+
+     
+
         <div class="box-category2" >
             <h2 class="title">기기 받기 </h2>
             <img src="{% static 'img/down11.png' %}" alt="down" onclick="toggleBox('box-category2', 'name2')">
             <h3 class="name" id="name2">
-                • 이름 : 이소민<br> 
-                • 필요한 기기 종류 : 태블릿<br> 
-                • 기기 받을 곳 : 성북지점 <br> 
-                • 신청 사유 : 태블릿으로 인강 자료 편하게 보고싶어요!</h3>
+                {% for get in get_list %}
+                    {% if request.user.is_authenticated %}
+                        {% if user.username == get.name %}
+                            • 이름 : {{get.name}} <br> 
+                            • 필요한 기기 종류 : {{get.kind}}<br> 
+                            • 기기 받을 곳 : {{get.address}} <br> 
+                            • 신청 사유 : {{get.reason}}</h3>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}               
         </div>
     </div>
 
@@ -44,7 +173,7 @@
 
         if (boxElement.style.height === "72px" || boxElement.style.height === "") {
             if (boxClass === 'box-category1') {
-                boxElement.style.height = "120px";
+                boxElement.style.height = "220px";
             } else if (boxClass === 'box-category2') {
                 boxElement.style.height = "220px";
             }
@@ -57,3 +186,4 @@
     </script>
 </body>
 </html>
+

@@ -11,7 +11,7 @@
     <body>
         <div class="container">
             <div class="icon">
-                <a href="/"><img src="{% static 'img/logo2.png' %}" alt="로고" class="logo"></a>
+                <a href="/"><img src="{% static 'img/logo2.png' %}" alt="로고" class="logo" ></a>
                 <!-- 햄버거버튼 -->
                 <a class="menu-trigger" href="#">
                     <span></span>
@@ -124,7 +124,17 @@
             slideImages();
         </script>
         <!-- 수정된 부분 끝 -->
-
+        <!-- {% if request.user.is_authenticated %}
+            <div>
+                {{ user.username }}님 환영합니다.
+                <a href="/common/logout">로그아웃</a>
+            </div>
+          {% else %}
+            <div>
+                <a href="/common/login">로그인</a>
+                <a href="/">회원가입</a>
+            </div>
+          {% endif %} -->
 
     </body>
 </html>

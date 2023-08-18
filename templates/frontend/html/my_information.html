@@ -20,22 +20,37 @@
     <main>
       <div class="user">
         <img src="{% static 'img/user-circle.png' %}" alt="유저사진" id="user-img">
-        <span id="user-id">OO님</span>
+        <span id="user-id">
+          {% if request.user.is_authenticated %}
+              <div>
+                  {{ user.username }}님 
+              </div>
+            {% endif %}</span>
       </div>
       <hr>
       <div class="information">
         <div class="name">
           <h2>이름</h2>
-          <span id="user-name">Name</span>
+          <span id="user-name">
+            {% if request.user.is_authenticated %}
+                <span>{{ user.username }}</span>
+              {% endif %}</span>
         </div>
         <div class="e-mail">
           <h2>이메일</h2>
-          <span id="user-email">E-mail</span>
+          <span id="user-email">
+            {% if request.user.is_authenticated %}
+                <span>{{ user.email }}</span>
+              {% endif %}</span>
         </div>
 
-        <div class="add-info">
-          <a href="">정보추가하기 ></a>
-        </div>
+        <a href="/common/logout">
+          <div class="logout-btn">
+            <p style="color: white; text-decoration-line: none;">로그아웃</p>
+          </div>
+        </a>
+        
+
 
       </div>
     </main>

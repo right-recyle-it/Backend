@@ -12,61 +12,59 @@
     <body>
         <div class="container">
             <div class="logo">
-                <img src="{% static 'img/logo2.png' %}" alt="로고">
-            </div>
-            <label for="username">
-            <div
-                class="mb-3"
-                style="border: 1px solid #EDEDED;
-                padding : 13px; color :  gray">
-                <input placeholder="Name" type="text" class="form-control" name="username" id="username"
-                value="{{ form.username.value|default_if_none:'' }}">
-            </div>
-            </label>
-            <!-- <div
-                class="mb-3"
-                style="border: 1px solid #EDEDED;
-                padding : 13px; color :  gray">
-                <input placeholder="E-mail address" input type="text" class="form-control" name="email" id="email"
-                value="{{ form.email.value|default_if_none:'' }}">
-            </div> -->
-
-            <div
-                class="mb-3"
-                style="border: 1px solid #EDEDED;
-                padding : 13px; color :  gray">
-                <input placeholder="password" type="password" class="form-control" name="password1" id="password1"
-                value="{{ form.password1.value|default_if_none:'' }}">
+                <img src="{% static 'img/logo2.png' %}" alt="로고" >
             </div>
 
-            <div
-                class="mb-3"
-                style="border: 1px solid #EDEDED;
-                padding : 13px; color :  gray">
-                <input placeholder="Confirm password" type="password" class="form-control" name="password2" id="password2"
-                value="{{ form.password2.value|default_if_none:'' }}">
-            </div>
-
-            <div
-                class="mb-3"
-                style="border: 1px solid #EDEDED;
-                padding : 13px; color :  gray">
-                <input placeholder="E-mail address" input type="text" class="form-control" name="email" id="email"
-                value="{{ form.email.value|default_if_none:'' }}">
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="border: none;
-            background-color: white;">
-                <a href="/">
+            <div class="main-container">
+                <label for="username">
                     <div
-                    class="signupbutton"
-                    style="border: 1px solid #EDEDED;
-                    padding : 13px; color :  gray">
-                        
-                        <h2>가입 하기</h2>
+                        class="name"
+                        style="border: 1px solid #EDEDED;
+                        padding : 13px; color :  gray">
+                        <input placeholder="Name" type="text" class="form-control" name="username" id="username"
+                        value="{{ form.username.value|default_if_none:'' }}">
                     </div>
-                </a>
-            </button>
+                    </label>
+        
+                    <div
+                        class="password"
+                        style="border: 1px solid #EDEDED;
+                        padding : 13px; color :  gray">
+                        <input placeholder="password" type="password" class="form-control" name="password1" id="password1"
+                        value="{{ form.password1.value|default_if_none:'' }}">
+                    </div>
+        
+                    <div
+                        class="confirm"
+                        style="border: 1px solid #EDEDED;
+                        padding : 13px; color :  gray">
+                        <input placeholder="Confirm password" type="password" class="form-control" name="password2" id="password2"
+                        value="{{ form.password2.value|default_if_none:'' }}">
+                    </div>
+        
+                    <div
+                        class="email"
+                        style="border: 1px solid #EDEDED;
+                        padding : 13px; color :  gray">
+                        <input placeholder="E-mail address" input type="text" class="form-control" name="email" id="email"
+                        value="{{ form.email.value|default_if_none:'' }}">
+                    </div>
+        
+                    <button type="submit" class="btn btn-primary" style="border: none;
+                    background-color: white;">
+                        <a href="/">
+                            <div
+                            class="signupbutton"
+                            style="border: 1px solid #EDEDED;
+                            padding : 13px; color :  gray">
+                                
+                                <h2>가입 하기</h2>
+                            </div>
+                        </a>
+                    </button>
+            </div>
+
+            
         </div>
     </body>
 </form>

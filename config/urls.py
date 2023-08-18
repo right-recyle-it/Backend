@@ -21,7 +21,7 @@ from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import routers
-from user.views import KakaoCallbackView, KakaoLoginView
+from user.views import KakaoLoginView
 # from pybo import views
 # from user.views import kakakoView
 router = routers.DefaultRouter()  # DefaultRouter를 설정

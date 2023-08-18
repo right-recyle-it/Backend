@@ -17,8 +17,10 @@ body {
     margin-left: 24px;
 }
 .logo {
-    max-width: 30px;
-    max-height: 30px;
+     width: 50px;
+     height: 70px;
+     position: relative;
+     top: -18px;
 }
 /*햄버거 버튼*/
 .ham-con {
@@ -109,7 +111,7 @@ body {
     line-height: 50px;
     text-indent: 10px;
     color: #000;
-    background-color: #fff;
+    background-color: white;
     text-decoration: none;
 }
 .ham-menu ul.ham-top-menu li a:hover {
@@ -124,14 +126,12 @@ body {
     position: relative;
     text-align: center;
 }
-
 #ad-container img {
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
 /* #ad-container::before {
     content: "";
     position: absolute;
